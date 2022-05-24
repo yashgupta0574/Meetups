@@ -9,7 +9,8 @@ function NewMeetupPage() {
     fetch("https://meetups-2500e-default-rtdb.firebaseio.com/meetups.json", {
       method: "POST",
       body: JSON.stringify(meetupData),
-      headers: {
+      headers: 
+      {
         "Content-Type": "application/json",
       },
     }).then(() => {

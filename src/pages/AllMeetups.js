@@ -9,12 +9,12 @@ function AllMeetupsPage() {
   useEffect(() => {
     setIsLoading(true);
     fetch("https://meetups-2500e-default-rtdb.firebaseio.com/meetups.json")
-      .then((response) => {
+      .then((response) => 
+      {
         return response.json();
       })
       .then((data) => {
         const meetups = [];
-
         for (const key in data) {
           const meetup = {
             id: key,

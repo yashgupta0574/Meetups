@@ -1,11 +1,11 @@
-import { createContext, useState } from 'react';
+import { createContext, useState } from "react";
 
 const FavoritesContext = createContext({
   favorites: [],
   totalFavorites: 0,
   addFavorite: (favoriteMeetup) => {},
   removeFavorite: (meetupId) => {},
-  itemIsFavorite: (meetupId) => {}
+  itemIsFavorite: (meetupId) => {},
 });
 
 export function FavoritesContextProvider(props) {
@@ -18,13 +18,13 @@ export function FavoritesContextProvider(props) {
   }
 
   function removeFavoriteHandler(meetupId) {
-    setUserFavorites(prevUserFavorites => {
-      return prevUserFavorites.filter(meetup => meetup.id !== meetupId);
+    setUserFavorites((prevUserFavorites) => {
+      return prevUserFavorites.filter((meetup) => meetup.id !== meetupId);
     });
   }
 
   function itemIsFavoriteHandler(meetupId) {
-    return userFavorites.some(meetup => meetup.id === meetupId);
+    return userFavorites.some((meetup) => meetup.id === meetupId);
   }
 
   const context = {
@@ -32,7 +32,7 @@ export function FavoritesContextProvider(props) {
     totalFavorites: userFavorites.length,
     addFavorite: addFavoriteHandler,
     removeFavorite: removeFavoriteHandler,
-    itemIsFavorite: itemIsFavoriteHandler
+    itemIsFavorite: itemIsFavoriteHandler,
   };
 
   return (
