@@ -17,12 +17,17 @@
 
 .content {
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .content h3 {
-  font-size: 1.25rem;
-  color: #2c292b;
+  font-size: 1.5rem;
+  color: #047222;
+}
+
+.content address,p {
+  font-size: 1rem;
+  color: #e64919;
 }
 
 .actions {
@@ -33,8 +38,8 @@
 .actions button {
   font: inherit;
   cursor: pointer;
-  color: #77002e;
-  border: 1px solid #77002e;
+  color: #822247;
+  border: 1px solid #279949;
   background-color: transparent;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
@@ -42,5 +47,5 @@
 
 .actions button:hover,
 .actions button:active {
-  background-color: #ffe2ed;
+  background-color: #eab6ca;
 }
